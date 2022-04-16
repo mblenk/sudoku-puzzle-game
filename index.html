@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <body class="body">
+        <div class="app">
+            <div class="header">
+                <h1 class="title">Sudoku Puzzles!</h1>
+                <label for="game-boards">Choose game difficulty:</label>
+                <select name="game-boards" id="game-boards">
+                    <option value="select" disabled selected>Select below...</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="expert">Expert</option>
+                </select>
+                <button id="start-game">Start Game!</button>
+            </div>
+            <div class="timer">
+                <h4 class="timer-heading">Time Elapsed:</h4>
+                <span class="count" id="timer-span">00:00:00</span>
+            </div>
+            <div id="puzzle" class="puzzle">
+            </div>            
+            <div class="buttons">
+                <button id="undo" class="game-btn">Undo</button>
+                <button id="pause" class="game-btn">Pause</button>
+                <button id="continue" class="game-btn hide">Continue</button>
+                <button id="clr-btn" class="game-btn">Clear table</button>
+            </div>  
+        </div>
+        <div class="modal">
+            <div class="modal-box">
+                <h2 id="modal-text"></h2>
+                <h3 id="modal-time"></h3>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </body>
+    <script type="module" src="./scripts/grid-format.js"></script>
+    <script type="module" src="./scripts/clear-grid.js"></script>
+    <script type="module" src="./scripts/start-game.js"></script>
+    <script type="module" src="./functions/loadGame.js"></script>
+    <script type="module" src="./functions/undo.js"></script>
+    <script type="module" src="./functions/timeFormat.js"></script>
+    <script type="module" src="./scripts/pause-game.js"></script>
+    <script type="module" src="./functions/puzzleComplete.js"></script>
+    <script type="module" src="./scripts/game-data.js"></script>
+    <script type="module" src="./functions/assignCellToRowColumnAndBox.js"></script>
+    <script type="module" src="./scripts/user-inputs.js"></script>
+    <script type="module" src="./scripts/undo-button.js"></script>
+    <script type="module" src="./functions/undoButton.js"></script>
+    <script type="module" src="./functions/userInputChange.js"></script>
+    <script type="module" src="./functions/checkArray.js"></script>
+    <script type="module" src="./functions/createBoard.js"></script>
+
+</html>
